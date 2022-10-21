@@ -1,0 +1,192 @@
+@charset "UTF-8";
+ /*
+    ..cor0: #c5ebd6;
+    ..cor1: #83e1ad;
+    ..cor2::#3ddc84;
+    ..cor3: #2fa866;
+    ..cor4: #1a5c37;
+    ..cor5: #063d1e;
+    */
+ @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@font-face {
+        font-family:  'Android';
+        src: url('../fontes/idroid.otf');
+        font-weight: normal;
+    }
+    /* abaixo temos as configurações globais  classe root,*/
+    :root {
+        --cor0: #c5ebd6;
+        --cor1: #83e1ad;
+        --cor2: #3ddc84;
+        --cor3:  #2fa866;
+        --cor4: #1a5c37;
+        --cor5: #063d1e;
+        --fonte-padrao: Arial,verdana,helvetica,sans-serif;
+        --font-destaque:'Bebas Neue', cursive;
+        --fonte-android:'Android', cursive;
+}
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: #c5ebd6;  
+    font-family:var(--fonte-padrao) ;
+}
+a.externo::after {
+    content:'\00A0\1F517';
+}
+main {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    margin:auto
+   min-width: 280px;
+   max-width: 800px;
+    }
+
+header {
+        background-image: linear-gradient(to bottom, #2fa866,#063d1e );
+    min-height: 150px;
+    text-align: center;
+    padding-top: 40px;
+}
+
+header > h1 {
+    color:white;
+    font-family: var(--font-destaque);
+    font-size: 4em;
+    font-weight: normal;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267);
+    }
+header > p {
+    font-family:  var(--font-destaque);
+    color: white;
+    font-size: 1.3em;
+    max-width: 800px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin:auto;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.267);
+}
+nav {
+    background-color: #063d1e;
+    padding: 10px;
+    box-shadow: 0px,7px,0,rgba(0, 0, 0, 0.192);
+}
+nav > a {
+    color: #83e1ad;
+    padding: 10px;
+    border-radius: 5px;/* para ficar um quebradinho quando passar o mouse*/
+    text-decoration: none;
+    font-weight: bold;/*para ficar em negrito*/
+    transition-duration: .5s;/*quando passar o maouse vai levar meio segundo pra mudar*/
+}
+/* essa classe hover faz com que quando passar o mouse no link apareça uma cor diferente no link*/
+nav > a:hover {
+    background-color: #1a5c37;
+    }
+main { 
+    min-width: 300px;
+    max-width: 1000px;
+    margin:auto;
+    margin-bottom: 50px;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.644); 
+    border-bottom-left-radius: 10px;
+
+
+main h1  {
+color: #063d1e;
+    font-family: var(--fonte-android);
+    font-weight: normal;
+    font-size: 1.8em;
+}
+main h2 {
+    font-family: var(--fonte-android);
+    color: #1a5c37;
+    font-size: 1.3em;
+    font-weight: normal;
+    background-image: linear-gradient(to right, #2fa866,transparent);
+    text-indent: 2em;
+}
+main p /*para mexer só nos paragrafos q estão no main*/ 
+{
+    margin: 15px 0px;/* cria uma margem em cima e em baixo de todos os paragrafos*/
+    text-align: justify;/*alinha os textos dos paragrafos nos lados dos paragrafos*/
+    text-indent: 30px;/* essa funçõ faz um recuo no inicio do paragrafo*/
+    line-height: 2em;/*line-height= altura entre linhas, entre uma linha e outra naõ vai ter espaço*/
+    font-size: 1em; /* a fonte fica mais grossa*/
+}
+main img {
+    width:100%;
+}
+main img.pequena {
+   max-width: 350px;
+    display: block;
+    margin: auto;
+}
+div.video {
+    background-color: #063d1e;
+    margin: 0px -20px 30px -20px;
+    padding-bottom: 59%;
+    position: relative;
+}
+div.video > iframe {
+    position: absolute;
+    top:5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+main strong {
+    color: #2fa866;
+    font-weight: bold;}
+    main a {
+        text-decoration: none; /*retirar*/
+        font-weight: bold;/*negrito*/
+        color: #063d1e; 
+        background-color: #3ddc84 ; /* fax uma caixa colorida em torno da palavra*/
+        padding: 2px 6px;
+    }
+    main a:hover { /*modifica qdo passar o mouse por cima*/
+        text-decoration: underline;
+        color:#2fa866;
+    }
+   aside {
+    background-color: #83e1ad;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.85);
+   }
+   aside > ul {
+    list-style-position: inside;
+    columns: 2;
+    list-style-type: '\2714\00A0\00A0';
+    }
+    aside > h3 {
+        background-color: #1a5c37;
+        color: white;/*letra branca*/
+        padding: 5px;
+        margin: -10px -10px 0px -10px;/*aumenta as laterais da cx pra fora e perde o arredondado*/
+        border-radius: 10px 10px 0px 0px; /*arredonda a parte de cima sem arredondar a parte de baixo*/
+        }
+footer {
+    background-color:#063d1e;
+    color:white;
+    text-align: center;
+    font-size: 0.8em;
+    padding: 5px;
+}
+footer  a  {
+color: white;
+font-size: bolder;
+text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+    color: #2fa866;
+}
